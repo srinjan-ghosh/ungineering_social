@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+.main{
+    width : 1940px;
+    height : 950px;
+    background-color : white;
+    float : left;
+   // margin-left : 100px;
+   // margin-right : 100px;
+}
+.l1{
+    width : 25%;
+    height : 80%;
+   // border-style : solid;
+    color : black;
+    background-color : white;
+    float : left;
+}
+.l2{
+    width : 70%;
+    height : 80%;
+   // border-style : solid;
+    color : black;
+    float : left;
+    background : lightsteelblue;
+}
+.s{
+    width :95%;
+    height : 20%;
+    //border-style : solid;
+    color : black;
+    float : left;
+    background : darkslategrey;
+}
+.l21{
+    width : 70%;
+    height :60%;
+   // border-style : solid;
+    margin-top : 180px;
+    margin-left : 80px;
+}
+h1{
+    font-size : 40;
+    color : darkslateblue;
+}
+.text{
+    width : 400px;
+    height : 40px;
+    font-size : 20;
+}
+.log{
+    width :400px;
+    height :40px;
+    font-size : 20;
+    background :crimson;
+}
+.l11{
+    width : 99.9%;
+    height : 10%;
+    //border-style : solid;
+    float : left;
+    margin-left :60px;
+}
+.l12{
+    width : 60%;
+    height : 30%;
+    //border-style : solid;
+    float : left;
+    margin-left : 100px;
+    margin-top : 80px;
+}
+.img{
+    border-style : solid;
+    width : 500px;
+    height : 100px;
+}
+.link{
+    width :250px;
+    height :20px;
+   // border-style :solid;
+    float : left ;
+    margin-left : 250px;
+}
+a{
+    color : green;
+    font-size : 21px;
+}
+
+        
