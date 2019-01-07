@@ -1,23 +1,22 @@
 input[type="email"]{
-    margin-left: 150px;
     height: 50px;
     width: 450px;
     border: #c5c5c5 1px solid;
     border-radius: 4px;
+    display: inline-block;
 }
 
 input[type="password"]{
-    margin-left: 105px;
     height: 50px;
     width: 450px;
     border: #c5c5c5 1px solid;
     border-radius: 4px;
+    display: inline-block;
 }
 
 input[type="submit"]{
     background-color: #ff0000;
     color: #ffffff;
-    margin-left: 222px;
     height: 50px;
     width: 150px;
     border: none;
@@ -25,6 +24,7 @@ input[type="submit"]{
     padding-right: 30px;
     padding-left: 30px;
     margin-bottom: 20px;
+    display: inline-block;
 }
 
 body{
@@ -39,6 +39,11 @@ button{
     padding: 5px 30px 5px 30px;
     width: 150px;
 }
+
+#form-field{
+    margin-bottom: 30px;
+}
+
 
 /* .banner{
     margin-right: 100px;
@@ -94,6 +99,8 @@ button{
     padding: 25px 50px 25px 50px;
     font-size: 18px;
     width: 90%;
+    border: rgba(124,124,124,0.5) solid 1px;
+    border-radius: 4px;
 }
 
 #logout-btn{
@@ -115,28 +122,28 @@ button{
     color: #7c7c7c;
 }
 
-#name{
-    margin-left: 150px;
+#name-field{
     height: 50px;
     width: 450px;
     border: #c5c5c5 1px solid;
     border-radius: 4px;
+    display: inline-block;
 }
 
 #college{
-    margin-left: 129px;
     height: 50px;
     width: 450px;
     border: #c5c5c5 1px solid;
     border-radius: 4px;
+    display: inline-block;
 }
 
 #phn-no{
-    margin-left: 40px;
     height: 50px;
     width: 450px;
     border: #c5c5c5 1px solid;
     border-radius: 4px;
+    display: inline-block;
 }
 
 #post-heading{
@@ -157,6 +164,13 @@ button{
     margin-top: 70px;
 }
 
+#form-tag{
+    display: inline-block;
+    margin: 0px;
+    margin-right: 50px;
+    width: 25%
+}
+
 img{
     width: 200px;
     height: 120px;
@@ -167,3 +181,4 @@ img{
     display: block;
     clear: both;
 }
+
