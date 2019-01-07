@@ -18,11 +18,11 @@
                     <h1>Create Account</h1><br/>
                     <font size ="5">
                     <form method="post" action="registration_submit.php">
-                    Name    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<input type="text" name="name" class ="text"/></br></br>
-                    Email   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<input type="text" name="email" class ="text"/></br></br> 
-                    Password &nbsp &nbsp &nbsp &nbsp<input type="password" name="password" class ="text" id="fpassword"/><br/><br/>
-                    Password &nbsp &nbsp &nbsp &nbsp<input type="password" name="cpassword" class ="text" id = "cfpassword" onblur ="myfunction()"/><br/><br/>
-                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <input type ="submit" name="create account" value="Create Account" class ="log"/></font></br></br></br>
+                    Name    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<input type="text" name="name" class ="text" id="name"/></br></br>
+                    Email   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<input type="text" name="email" class ="text" id="email"/></br></br> 
+                    Password &nbsp &nbsp &nbsp &nbsp<input type="password" name="password" class ="text" id="fpassword" /><br/><br/>
+                    Password &nbsp &nbsp &nbsp &nbsp<input type="password" name="cpassword" class ="text" id = "cfpassword" /><br/><br/>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <input type ="submit" name="create account" value="Create Account" class ="log" id ="submit"/></font></br></br></br>
                     </form>
                     <div class ="link">
                     <a href="login_form.php">Exsting User Log-In</a>

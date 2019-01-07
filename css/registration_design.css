@@ -48,6 +48,9 @@ h1{
     width : 400px;
     height : 40px;
     font-size : 20;
+    //border-top : solid 3px blue;
+    //border-right : solid 3px blue;
+    // background-color: lightblue;
 }
 .log{
     width :400px;
