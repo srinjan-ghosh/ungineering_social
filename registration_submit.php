@@ -35,7 +35,7 @@
         ?>
          <html>
                 <head>
-                    <link rel="stylesheet" href="css/registation_submit_design.css"/>
+                    <link rel="stylesheet" href="css/registration_submit_design.css"/>
                 </head>
                 <body style ="text-align:center;">
                     <div class = "welcome">

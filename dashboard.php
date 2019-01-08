@@ -27,6 +27,8 @@
         if(!mysqli_query($conn, $sql)){
             die("Error: ". $sql . "<br/>". mysqli_error($conn));
         }
+        header("Location:dashboard.php");
+        exit;
     }
 
 
@@ -53,19 +55,31 @@
                 <!-- my dashboard
                 logout button -->
                 <p id= "dashboard"><strong>My Dashboard</strong></p>
-                <button id="logout-btn">Logout</button>
+                <a href="dashboard_logout.php"><button id="logout-btn">Logout</button></a>
             </div>
         </div>
         <div class="body">
             <div class="account-details">
                 <h1 id="account-heading">My Account Details</h1>
                 <form class="form" method="post" action="dashboard.php">
-                    Name<input type="text" id="name" name="name" value="<?php echo $row['name']?>"/><br/><br>
-                    Email<input type="email" name="email" value="<?php echo $row['email']?>"/><br/><br>
-                    Password<input type="password" name="password" value="<?php echo $row['password']?>"/><br/><br>
-                    College<input type="text" id="college" name="college" value="<?php echo $row['collage']?>"/><br/><br>
-                    Phone Number<input type="text" id="phn-no" name="phone-number" value="<?php echo $row['phone_number']?>"/><br/><br>
-                    <input type="submit" name="submit" value="Update">
+                    <div id="form-field">
+                        <p id="form-tag">Name</p><input type="text" id="name-field" name="name" value="<?php echo $row['name']?>"/>
+                    </div>
+                    <div id="form-field"> 
+                        <p id="form-tag">Email</p><input type="email" name="email" value="<?php echo $row['email']?>"/>
+                    </div>
+                    <div id="form-field"> 
+                        <p id="form-tag">Password</p><input type="password" name="password" value="<?php echo $row['password']?>"/>
+                    </div>
+                    <div id="form-field"> 
+                        <p id="form-tag">College</p><input type="text" id="college" name="college" value="<?php echo $row['collage']?>"/>
+                    </div>
+                    <div id="form-field">
+                        <p id="form-tag">Phone Number</p><input type="text" id="phn-no" name="phone-number" value="<?php echo $row['phone_number']?>"/>
+                    </div>
+                    <div>
+                        <p id="form-tag"></p><input type="submit" name="submit" value="Update">
+                    </div>
                 </form>
             </div>
             <div class="post">

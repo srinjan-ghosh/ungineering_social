@@ -9,6 +9,40 @@
    // margin-left : 100px;
     //margin-right : 100px;
 }
+.form{
+   // border-style : solid;
+    float : left;
+    height :30%;
+    margin-top : 1px;
+}
+.box{
+    margin-top :25px;
+    //border-style : solid;
+    width : 100%;
+    float : left;
+    height :20%;
+}
+.box1{
+   // border-style : solid;
+    height :100%;
+    width : 20%;
+    float : left;
+    padding-left :60px;
+    font-size : 30px;
+}
+.box2{
+    //border-style : solid;
+    height :100%;
+    width : 80%;
+    float : left;
+}
+.box3{
+   // border-style : solid;
+    width : 100%;
+    float : left;
+    padding-left :270px;
+    margin-top :20px;
+}
 .l1{
     width : 25%;
     height : 80%;
@@ -34,26 +68,30 @@
     background : darkslategrey;
 }
 .l21{
-    width : 70%;
-    height :60%;
-   // border-style : solid;
+    width : 100%;
+    //border-style : solid;
     margin-top : 180px;
-    margin-left : 80px;
+    //margin-left : 80px;
+    padding-left : 65px;
 }
 h1{
     font-size : 40;
     color : darkslateblue;
 }
 .text{
-    width : 400px;
+    width : 500px;
     height : 40px;
     font-size : 20;
+    //border-top : solid 3px blue;
+    //border-right : solid 3px blue;
+    // background-color: lightblue;
 }
 .log{
-    width :400px;
+    width :500px;
     height :40px;
     font-size : 20;
     background :crimson;
+    border-color :crimson;
 }
 .l11{
     width : 99.9%;
@@ -74,11 +112,11 @@ h1{
     height : 100px;
 }
 .link{
-    width :250px;
-    height :20px;
-   // border-style :solid;
+    width :100%;
+    //border-style :solid;
     float : left ;
-    margin-left : 250px;
+    margin-top :140px;
+    padding-left :430px;
 }
 a{
     color : green;

@@ -16,10 +16,30 @@
             <div class ="l2">
                 <div class ="l21" style ="text-align :left;">
                     <h1>Log-In</h1><br/>
+                </div>
+                <div class="form">
                     <form method ="post" action = "login_submit_try.php">
-                    <font size ="5"> Email   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<input type="text" name="email" class ="text"/></br></br> 
-                    Password &nbsp &nbsp &nbsp &nbsp<input type="password" name="password" class ="text"/><br/><br/>
-                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <input type ="submit" name="log-in" value="log-in" class ="log"/></font></br></br></br>
+                        <font size ="5">
+                            <div class ="box">
+                                <div class ="box1"> 
+                                    Email
+                                </div>
+                                <div class ="box2"> 
+                                    <input type="text" name="email" class ="text" id="femail"/>
+                                </div>
+                            </div>
+                            <div class ="box">
+                                <div class="box1"> 
+                                    Password
+                                </div>
+                                <div class="box2">
+                                    <input type="password" name="password" class ="text" id="fpassword"/>
+                                </div>
+                            </div>
+                            <div class ="box3">
+                                <input type ="submit" name="log-in" value="log-in" class ="log" id ="submit"/>
+                            </div>
+                        </font>
                     </form>
                     <div class ="link">
                     <a href="registration_form.php">New User Create Account</a>
@@ -29,5 +49,6 @@
             <div class ="s">
             </div>
         </div>
+        <script type="text/javascript" src="js/login_script.js"></script> 
     </body>
 </html>

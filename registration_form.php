@@ -16,19 +16,52 @@
             <div class ="l2">
                 <div class ="l21" style ="text-align :left;">
                     <h1>Create Account</h1><br/>
+                </div>
                     <font size ="5">
-                    <form method="post" action="registration_submit.php">
-                    Name    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<input type="text" name="name" class ="text"/></br></br>
-                    Email   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<input type="text" name="email" class ="text"/></br></br> 
-                    Password &nbsp &nbsp &nbsp &nbsp<input type="password" name="password" class ="text" id="fpassword"/><br/><br/>
-                    Password &nbsp &nbsp &nbsp &nbsp<input type="password" name="cpassword" class ="text" id = "cfpassword" onblur ="myfunction()"/><br/><br/>
-                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <input type ="submit" name="create account" value="Create Account" class ="log"/></font></br></br></br>
-                    </form>
+                    <div class ="form">
+                        <form method="post" action="registration_submit.php">
+                            <div class ="box">
+                                <div class ="box1">
+                                    Name
+                                </div>
+                                <div class ="box2">
+                                    <input type="text" name="name" class ="text" id="name"/>
+                                </div>
+                            </div>
+                            <div class ="box">
+                                <div class ="box1">
+                                    Email
+                                </div>
+                                <div class ="box2">
+                                    <input type="text" name="email" class ="text" id="email"/>
+                                </div> 
+                            </div>
+                            <div class ="box">
+                                <div class="box1">
+                                    Password
+                                </div>
+                                <div class ="box2">
+                                    <input type="password" name="password" class ="text" id="fpassword" />
+                                </div>
+                            </div>
+                            <div class ="box">
+                                <div class ="box1">
+                                    Password
+                                </div>
+                                <div class ="box2">
+                                    <input type="password" name="cpassword" class ="text" id = "cfpassword" />
+                                </div>
+                            </div>
+                            <div class ="box3">
+                                <input type ="submit" name="create account" value="Create Account" class ="log" id ="submit"/>
+                            </div>
+                        </font>
+                        </form>
+                    </div>
                     <div class ="link">
-                    <a href="login_form.php">Exsting User Log-In</a>
+                        <a href="login_form.php">Exsting User Log-In</a>
                     </div>
                 </div>
-            </div>
             <div class ="s">
             </div>
         </div>
