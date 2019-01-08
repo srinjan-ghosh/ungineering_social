@@ -1,0 +1,228 @@
+<?php
+    //session_start();
+    $hostname = "localhost";
+    $username = "root";
+    $db_password = "sayantan";
+    $database = "social_media";
+
+    $conn = mysqli_connect($hostname, $username, $db_password, $database);
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+    $id=1;
+    //$id=$_SEESION['$id'];
+    //$email=$_POST['email'];
+    
+    $sql1 = "SELECT * FROM users WHERE id='$id'";
+    $sql2 = "SELECT * FROM status_updates WHERE user_id='$id'";
+
+    $result1 = mysqli_query($conn, $sql1);
+    if (!$result1) {// $result is the pointer to the associative array representing of the 1st row 
+        die("Error: " . $sql . "<br>" . mysqli_error($conn));
+    }
+    $result2 = mysqli_query($conn, $sql2);
+    if (!$result2) {// $result is the pointer to the associative array representing of the 1st row 
+        die("Error: " . $sql . "<br>" . mysqli_error($conn));
+    }
+    //while($row1=mysqli_fetch_array($result1)&&$row2=mysqli_fetch_array($result2)){
+       //for($id=1;$id>=11;$id++)
+     $row1=mysqli_fetch_array($result1);
+     $row2=mysqli_fetch_array($result2);
+     
+     
+     ---------------------------------------------------------------------------------------------------------------------------------------
+     <?php
+    //session_start();
+    $hostname = "localhost";
+    $username = "root";
+    $db_password = "sayantan";
+    $database = "social_media";
+
+    $conn = mysqli_connect($hostname, $username, $db_password, $database);
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+    //$id=1;
+    //$id=$_SEESION['$id'];
+    //$email=$_POST['email'];
+    
+    $sql1 = "SELECT name FROM users";
+    $sql2 = "SELECT status,date_time FROM status_updates";
+    
+    $news_query = mysqli_query($conn, $sql2) or die(mysqli_error($conn));
+    $rsNews = mysqli_fetch_array($news_query);
+ 
+
+    //$result1 = mysqli_query($conn, $sql1);
+    //if (!$result1) {// $result is the pointer to the associative array representing of the 1st row 
+        //die("Error: " . $sql . "<br>" . mysqli_error($conn));
+    //}
+   // $result2 = mysqli_query($conn, $sql2);
+   // if (!$result2) {// $result is the pointer to the associative array representing of the 1st row 
+       // die("Error: " . $sql . "<br>" . mysqli_error($conn));
+   // }
+    //while($row1=mysqli_fetch_array($result1)&&$row2=mysqli_fetch_array($result2)){
+       //for($id=1;$id>=11;$id++)
+     //$row1=mysqli_fetch_array($result1);
+   //  $row2=mysqli_fetch_array($result2);
+                                                                                  
+     
+    
+        
+     
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="/social_media/css/homepage.css">
+    </head>
+    <body>
+    
+        <div class="a">  
+            <div class="a1">
+                <img class="image" src="img/Social-Media-Graphic.jpg"/>
+            </div>
+            <div class="a2">
+                <button href="registration_form.php" class="button1">New user</button>
+                
+                
+            
+            </div>
+            <div class="a3">
+                
+                    <button class="button2">Login</button>
+            </div>
+        </div>
+        
+        <div class="b">
+            <div class="c">
+            
+                <div class="c1">
+                <table>
+                <tr>
+                <th>status</th>
+                <th>date_time</th>
+                </tr>
+                </table>
+                <? php 
+                    if($) 
+                ?> 
+             
+                </div>
+                
+                <!--<div class="c2">
+                </div>
+                <div class="c3">
+                     <p>
+                        <b><?php echo $row1['name'] ?></b> 
+                        <p>
+                            <?php echo $row2['status']?><br/><br>
+                            <?php echo $row2['date_time']?>
+                        </p> 
+                    </p>
+                </div>
+                <div class="c4">
+                </div>
+                <div class="c5">
+                    <p>
+                        <b><?php echo $row1['name'] ?></b> 
+                        <p>
+                            <?php echo $row2['status']?><br/><br>
+                            <?php echo $row2['date_time']?>
+                        </p> 
+                    </p>
+                </div>
+                <div class="c6">
+                </div>
+                <div class="c7">
+                    <p>
+                        <b><?php echo $row1['name'] ?></b> 
+                        <p>
+                            <?php echo $row2['status']?><br/><br>
+                            <?php echo $row2['date_time']?>
+                        </p> 
+                    </p>
+                </div>
+                <div class="c8">
+                </div>
+                <div class="c9">
+                    <p>
+                        <b><?php echo $row1['name'] ?></b> 
+                        <p>
+                            <?php echo $row2['status']?><br/><br>
+                            <?php echo $row2['date_time']?>
+                        </p> 
+                    </p>
+                </div>
+                <div class="c10">
+                </div>
+                <div class="c11">
+                    <p>
+                        <b><?php echo $row1['name'] ?></b> 
+                        <p>
+                            <?php echo $row2['status']?><br/><br>
+                            <?php echo $row2['date_time']?>
+                        </p> 
+                    </p>
+                </div>
+                <div class="c12">
+                </div>
+                <div class="c13">
+                    <p>
+                        <b><?php echo $row1['name'] ?></b> 
+                        <p>
+                            <?php echo $row2['status']?><br/><br>
+                            <?php echo $row2['date_time']?>
+                        </p> 
+                    </p>
+                </div>
+                <div class="c14">
+                </div>
+                <div class="c15">
+                    <p>
+                        <b><?php echo $row1['name'] ?></b> 
+                        <p>
+                            <?php echo $row2['status']?><br/><br>
+                            <?php echo $row2['date_time']?>
+                        </p> 
+                    </p>
+                </div>
+                <div class="c16">
+                </div>
+                <div class="c17">
+                    <p>
+                        <b><?php echo $row1['name'] ?></b> 
+                        <p>
+                            <?php echo $row2['status']?><br/><br>
+                            <?php echo $row2['date_time']?>
+                        </p> 
+                    </p>
+                </div>
+                <div class="c18">
+                </div>
+                <div class="c19">
+                    <p>
+                        <b><?php echo $row1['name'] ?></b> 
+                        <p>
+                            <?php echo $row2['status']?><br/><br>
+                            <?php echo $row2['date_time']?>
+                        </p> 
+                    </p>
+                </div>
+                <div class="c20">
+                </div>
+                <div class="c21">
+                    <p>
+                        <b><?php echo $row1['name'] ?></b> 
+                        <p>
+                            <?php echo $row2['status']?><br/><br>
+                            <?php echo $row2['date_time']?>
+                        </p> 
+                    </p>
+                </div>
+           </div>-->
+       </div>
+   </body>
+</html>
+

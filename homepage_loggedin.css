@@ -11,21 +11,22 @@
     float: left;
     //border: solid 2px black;
     
-    height:197px;
+    height:97px;
     background-color: white;
     width:25%;
 }
 .a2{
-     margin-top:168px;
+     margin-top:172px;
      float: right;
+     
      //border: solid 4px black;
-     //border-left:6px;
+     //border-left:4px;
      height:25px;
      background-color: white;
      width:20%;
 }
 .a3{
-     margin-top:168px;
+     margin-top:172px;
      float: right;
      //border-right:6px;
      margin-right:2px;
@@ -59,6 +60,7 @@
 .d12{
     float:left;
     height:130px;
+    
     //border:solid 1px black;
     width:100%;
 }
@@ -70,33 +72,13 @@
     background-color: rgb(244,244,244);
 }
 .d12b{
-    margin-top:0px;
-    float:left;
-    height:90px;
-    //padding:5px 20px 5px 30px ;
-    //border:solid 1px black;
-    width:100%;
-    background-color: white;
-}
-.d12c{
-    margin-top:0px;
+    margin-top:90px;
     float:left;
     height:20px;
     padding:5px 20px 5px 30px ;
     //border:solid 1px black;
     width:100%;
     background-color: rgb(244,244,244);
-}
-.d12d{
-    margin-top:0px;    
-    float:left;
-    height:90px !important;
-    cursor:pointer!important;
-    //padding:5px 20px 5px 30px ;
-    border:solid 1px black!important;
-    width:100%;
-    background-color: white;
-
 }
     
 .d13{
@@ -106,14 +88,11 @@
     width:100%;
     background-color: rgb(244,244,244);
 }
-#textbox{
-    height:90px;
-    width:100%;
-}
+    
 .b{
 
     //border: solid 3px black;
-    height:1800px;
+    height:2000px;
     background-color: rgb(244,244,244);
 }
 .c{
@@ -130,7 +109,7 @@
 .c1{
     float:left;
     height:120px;
-    padding:15px 20px 5px 40px ;
+    padding:5px 20px 5px 40px ;
     //border: solid 1px black;
     width:100%;
     background-color: white;
@@ -286,45 +265,28 @@
 }
 
 .image{
-    float: left;
-    height:195px;
+    //float: left;
+    //height:195px;
     
 }
 .button1{
-    background-color:#e20d2a;
-    color: white;
-    border:  1px solid #e20d2a;
-    padding: 6px 20px 6px 20px;
+    background-color: white;
+    color: #e20d2a;;
+    border:  1px solid  #e20d2a;
+    padding: 6px 20px;
     text-align: center;
     font-size: 10px;
     cursor: pointer;
 }
 .button2{
    float: right;
-   border:  1px solid red;
+   border:  1px solid white;
    background-color: white;
    color: #e20d2a; 
-   padding: 6px 30px 6px 30px;
+   padding: 6px 30px;
    text-align: center;
    font-size: 10px;
    cursor: pointer;
-   
-}
-.style{ 
-    float: left;
-    margin-bottom:3px !important;
-    margin-top:4px !important;
-    color: #595959;
-    font-family:Times new roman;
-}
-input[type=text]{
-    box-sizing: border-box;
-    width:100%;
-    height:80px;
-    border: none;
-    cursor: top;
-    box-sizing: border-box;
-    background-color: white;
 }
 .button3{
     float: right;
@@ -336,4 +298,11 @@ input[type=text]{
     font-size: 10px;
     cursor: pointer;
 }
-
+.style{ 
+    float: left;
+    margin-bottom:3px;
+    color: #595959;
+    font-family:Times 
+}
+    
+    

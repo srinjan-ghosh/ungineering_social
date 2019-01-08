@@ -34,82 +34,6 @@
      background-color: white;
      width:20%;
 }
-.d{
-    //border: solid 1px black;
-    height:200px;
-    background-color: white;
-    background-color: rgb(244,244,244);
-}
-.d1{
-    //border: solid 1px black;
-    height:198px;
-    background-color: white;
-    position: absolute;
-    margin-left:20%;
-    margin-right:20%;
-    width:60%;
-}
-.d11{
-    float:left;
-    height:40px;
-    //border:solid 1px black;
-    width:100%;
-    background-color: rgb(244,244,244);
-}
-.d12{
-    float:left;
-    height:130px;
-    //border:solid 1px black;
-    width:100%;
-}
-.d12a{
-    float:left;
-    height:20px;
-    //border:solid 1px black;
-    width:100%;
-    background-color: rgb(244,244,244);
-}
-.d12b{
-    margin-top:0px;
-    float:left;
-    height:90px;
-    //padding:5px 20px 5px 30px ;
-    //border:solid 1px black;
-    width:100%;
-    background-color: white;
-}
-.d12c{
-    margin-top:0px;
-    float:left;
-    height:20px;
-    padding:5px 20px 5px 30px ;
-    //border:solid 1px black;
-    width:100%;
-    background-color: rgb(244,244,244);
-}
-.d12d{
-    margin-top:0px;    
-    float:left;
-    height:90px !important;
-    cursor:pointer!important;
-    //padding:5px 20px 5px 30px ;
-    border:solid 1px black!important;
-    width:100%;
-    background-color: white;
-
-}
-    
-.d13{
-    float:left;
-    height:30px;
-    //border:solid 1px black;
-    width:100%;
-    background-color: rgb(244,244,244);
-}
-#textbox{
-    height:90px;
-    width:100%;
-}
 .b{
 
     //border: solid 3px black;
@@ -130,7 +54,7 @@
 .c1{
     float:left;
     height:120px;
-    padding:15px 20px 5px 40px ;
+    padding:5px 20px 5px 40px ;
     //border: solid 1px black;
     width:100%;
     background-color: white;
@@ -291,9 +215,9 @@
     
 }
 .button1{
-    background-color:#e20d2a;
+    background-color:  #e20d2a;
     color: white;
-    border:  1px solid #e20d2a;
+    border:  1px solid  #e20d2a;
     padding: 6px 20px 6px 20px;
     text-align: center;
     font-size: 10px;
@@ -309,31 +233,5 @@
    font-size: 10px;
    cursor: pointer;
    
-}
-.style{ 
-    float: left;
-    margin-bottom:3px !important;
-    margin-top:4px !important;
-    color: #595959;
-    font-family:Times new roman;
-}
-input[type=text]{
-    box-sizing: border-box;
-    width:100%;
-    height:80px;
-    border: none;
-    cursor: top;
-    box-sizing: border-box;
-    background-color: white;
-}
-.button3{
-    float: right;
-    background-color:  #e20d2a;
-    color: white;
-    border:  1px solid  #e20d2a;
-    padding: 6px 20px;
-    text-align: center;
-    font-size: 10px;
-    cursor: pointer;
 }
 

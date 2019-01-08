@@ -70,15 +70,7 @@
             </div>
             <div class="post">
                 <h1 id="post-heading">My Post</h1>
-                <?php
-                    $sql = "SELECT date_time,status FROM status_updates WHERE user_id = '$user_id'";
-                    $result = mysqli_query($conn,$sql);
-                    while($row = mysqli_fetch_array($result)){
-                        ?>
-                        <p id="post-desc"><?php echo $row['date_time']?><br><br><?php echo $row['status']?></p>
-                        <?php
-                    }
-                ?>
+                <p id="post-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia, quam non ornare varius, augue neque molestie dui, congue blandit lorem magna eu sapien. Pellentesque nisl massa, tempor vitae magna eu, blandit tristique libero. Vestibulum dolor neque, aliquam eget cursus vitae, vestibulum sed nisi. Phasellus aliquam condimentum justo et ultricies. Mauris semper, quam nec gravida rutrum, nunc tellus malesuada mauris, porttitor egestas dolor augue sodales ante. Sed maximus neque non laoreet ornare. Donec rutrum et elit sodales convallis.</p>
             </div>
         </div>
         <div class="footer">
