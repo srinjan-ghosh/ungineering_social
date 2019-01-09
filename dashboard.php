@@ -57,7 +57,7 @@
                 <!-- my dashboard
                 logout button -->
                 <p id= "dashboard"><strong>My Dashboard</strong></p>
-                <a href="dashboard_logout.php"><button id="logout-btn">Logout</button></a>
+                <a href="logout.php"><button id="logout-btn">Logout</button></a>
             </div>
         </div>
         <div class="body">
@@ -83,6 +83,7 @@
                         <p id="form-tag"></p><input type="submit" name="submit" value="Update">
                     </div>
                 </form>
+                <p id="error"></p>
             </div>
             <div class="post">
                 <h1 id="post-heading">My Post</h1>
