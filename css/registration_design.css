@@ -2,8 +2,8 @@
     box-sizing: border-box;
 }
 .main{
-    width : 1940px;
-    height : 950px;
+    width : 100%;
+    height : 100%x;
     background : black;
     float : left;
    // margin-left : 100px;
@@ -40,7 +40,7 @@
    // border-style : solid;
     width : 100%;
     float : left;
-    padding-left :270px;
+    padding-left :275px;
     margin-top :20px;
 }
 .l1{
@@ -51,8 +51,12 @@
     background-color : white;
     float : left;
 }
+body{
+    width :100%;
+    height : 100%;
+}
 .l2{
-    width : 70%;
+    width : 75%;
     height : 80%;
    // border-style : solid;
     color : black;
@@ -60,7 +64,7 @@
     background : lightsteelblue;
 }
 .s{
-    width :95%;
+    width :100%;
     height : 20%;
     //border-style : solid;
     color : black;
@@ -115,8 +119,8 @@ h1{
     width :100%;
     //border-style :solid;
     float : left ;
-    margin-top :140px;
-    padding-left :430px;
+    margin-top :160px;
+    padding-left :450px;
 }
 a{
     color : green;

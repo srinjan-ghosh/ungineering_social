@@ -42,7 +42,7 @@
                         </font>
                     </form>
                     <div class ="link">
-                    <a href="registration_form.php">New User Create Account</a>
+                        <a href="registration_form.php">New User Create Account</a>
                     </div>
                 </div>
             </div>
