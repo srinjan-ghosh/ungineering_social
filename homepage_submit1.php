@@ -1,5 +1,5 @@
 <?php
-    //session_start();
+    session_start();
     $hostname = "localhost";
     $username = "root";
     $db_password = "sayantan";
@@ -11,11 +11,12 @@
     } 
     if (isset($_SESSION['user_id'])){
         if($_POST['status']){
-            $email_fetch="SELECT email FROM users WHERE id='user_id'";
+            $user_id=$_SESSION['user_id'];
+            $email_fetch="SELECT email FROM users WHERE id='$user_id'";
             $result1 = mysqli_query($conn, $email_fetch);
             $row1=mysqli_fetch_array($result1)['email'];
-            $id_fetch="SELECT user_id FROM users WHERE id='user_id'";
-            $result2 = mysqli_query($conn, $name_fetch);
+            $id_fetch="SELECT id FROM users WHERE id='$user_id'";
+            $result2 = mysqli_query($conn, $id_fetch);
             $row2=mysqli_fetch_array($result2)['id'];
             $status=$_POST['status'];
             $sql="INSERT INTO status_updates (user_id,email,status) VALUES ('$row2','$row1','$status')";

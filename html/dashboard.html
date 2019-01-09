@@ -2,24 +2,13 @@
 <html>
     <head>
         <title>Dashboard</title>
-        <link rel="stylesheet" href="css/dashboard.css"/>
+        <link rel="stylesheet" href="../css/dashboard.css"/>
     </head>
     <body>
-        <!-- <div class="banner">
-            <div id="logo">
-                    <img src="img/Social-Media-Graphic.jpg" alt="">
-            </div>
-            <div id="dashboard">
-                <p><strong>My Dashboard</strong></p>
-            </div>
-            <div id="logout-btn">
-                <button>Logout</button>
-            </div>
-        </div> -->
         <div class="banner">
             <div id="logo">
                 <!-- img here -->
-                <img src="img/Social-Media-Graphic.jpg" alt="">
+                <img src="../img/Social-Media-Graphic.jpg" alt="">
             </div>
             <div id="banner-links">
                 <!-- my dashboard
@@ -31,13 +20,25 @@
         <div class="body">
             <div class="account-details">
                 <h1 id="account-heading">My Account Details</h1>
-                <form class="form">
-                    Name<input type="text" id="name" name="name"/><br/><br>
-                    Email<input type="email" name="email"/><br/><br>
-                    Password<input type="password" name="password"/><br/><br>
-                    College<input type="text" id="college" name="college"/><br/><br>
-                    Phone Number<input type="text" id="phn-no" name="phone-number"/><br/><br>
-                    <input type="submit" name="submit" value="Update">
+                <form id="update-form"class="form" method="post" action="dashboard.php">
+                    <div id="form-field">
+                        <p id="form-tag">Name</p><input type="text" id="name-field" name="name"/>
+                    </div>
+                    <div id="form-field"> 
+                        <p id="form-tag">Email</p><input type="email" name="email" />
+                    </div>
+                    <div id="form-field"> 
+                        <p id="form-tag">Password</p><input type="password" name="password"/>
+                    </div>
+                    <div id="form-field"> 
+                        <p id="form-tag">College</p><input type="text" id="college" name="college"/>
+                    </div>
+                    <div id="form-field">
+                        <p id="form-tag">Phone Number</p><input type="text" id="phn-no" name="phone-number"/>
+                    </div>
+                    <div>
+                        <p id="form-tag"></p><input type="submit" name="submit" value="Update">
+                    </div>
                 </form>
             </div>
             <div class="post">
@@ -54,4 +55,6 @@
         <div class="footer">
         </div>
     </body>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/dashboard.js"></script>
 </html>

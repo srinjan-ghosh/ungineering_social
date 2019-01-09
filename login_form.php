@@ -18,7 +18,7 @@
                     <h1>Log-In</h1><br/>
                 </div>
                 <div class="form">
-                    <form method ="post" action = "login_submit_try.php">
+                    <form method ="post" action = "login_submit.php">
                         <font size ="5">
                             <div class ="box">
                                 <div class ="box1"> 

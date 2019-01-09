@@ -24,9 +24,9 @@
     while ($row=mysqli_fetch_array($result)) {
         if($row['email']===$email&&$row['password']===$password){
            // echo "Hi" ." ". $row['name'] . " " ."Welcome in social_media Website";
-            $_SESSION['id'] = $row['id'];
+            $_SESSION['user_id'] = $row['id'];
             ?>
-           // <a href ="homepage.php"> click here to continue </a>
+           // <a href ="homepage_submit.php"> click here to continue </a>
             <?php
             $flag++;
             break;

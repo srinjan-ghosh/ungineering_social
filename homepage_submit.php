@@ -14,7 +14,7 @@
 <html>
     <head>
         <title></title>
-        <link rel="stylesheet" href="/social_media/css/homepage.css">
+        <link rel="stylesheet" href="css/homepage.css">
     </head>
     <body>   
         <div class="a">  

@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if(!isset($_SESSION['id'])){
+    if(!isset($_SESSION['user_id'])){
         header("Location:login_form.php");
         exit;
     }
@@ -14,23 +14,24 @@
         die("Connection failed: " . mysqli_connect_error());
     }
 
-    $user_id = $_SESSION['id'];
 
-    if($_POST['college']){
-        $name=$_POST['name'];
-        $email=$_POST['email'];
-        $password=$_POST['password'];
-        $college=$_POST['college'];
-        $phone=$_POST['phone-number'];
-        $sql="UPDATE users 
-                SET name='$name', email='$email', password='$password', collage='$college', phone_number='$phone' 
-                WHERE id='$user_id'";
-        if(!mysqli_query($conn, $sql)){
-            die("Error: ". $sql . "<br/>". mysqli_error($conn));
-        }
-        header("Location:dashboard.php");
-        exit;
-    }
+    $user_id=$_SESSION['user_id'];
+
+    // if($_POST['college']){
+    //     $name=$_POST['name'];
+    //     $email=$_POST['email'];
+    //     $password=$_POST['password'];
+    //     $college=$_POST['college'];
+    //     $phone=$_POST['phone-number'];
+    //     $sql="UPDATE users 
+    //             SET name='$name', email='$email', password='$password', collage='$college', phone_number='$phone' 
+    //             WHERE id='$user_id'";
+    //     if(!mysqli_query($conn, $sql)){
+    //         die("Error: ". $sql . "<br/>". mysqli_error($conn));
+    //     }
+    //     header("Location:dashboard.php");
+    //     exit;
+    // }
 
 
     $sql = "SELECT * FROM users WHERE id='$user_id'";
@@ -62,7 +63,7 @@
         <div class="body">
             <div class="account-details">
                 <h1 id="account-heading">My Account Details</h1>
-                <form class="form" method="post" action="dashboard.php">
+                <form id= "update-form" class="form" method="post" action="dashboard.php">
                     <div id="form-field">
                         <p id="form-tag">Name</p><input type="text" id="name-field" name="name" value="<?php echo $row['name']?>"/>
                     </div>
@@ -99,4 +100,6 @@
         <div class="footer">
         </div>
     </body>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/dashboard.js"></script>
 </html>
