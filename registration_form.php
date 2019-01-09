@@ -19,7 +19,7 @@
                 </div>
                     <font size ="5">
                     <div class ="form">
-                        <form method="post" action="registration_submit.php">
+                        <form method="post" action="registration_submit.php" id="registration_form">
                             <div class ="box">
                                 <div class ="box1">
                                     Name
@@ -65,6 +65,7 @@
             <div class ="s">
             </div>
         </div>
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="js/registration_script.js"></script> 
     </body>
 </html>

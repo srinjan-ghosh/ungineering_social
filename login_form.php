@@ -18,7 +18,7 @@
                     <h1>Log-In</h1><br/>
                 </div>
                 <div class="form">
-                    <form method ="post" action = "login_submit.php">
+                    <form method ="post" action = "login_submit.php" id="login_form" >
                         <font size ="5">
                             <div class ="box">
                                 <div class ="box1"> 
@@ -49,6 +49,7 @@
             <div class ="s">
             </div>
         </div>
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="js/login_script.js"></script> 
     </body>
 </html>

@@ -1,3 +1,32 @@
+$(document).ready(function () {
+    $('#registration_form').submit(function() {
+        var url = "registration_submit.php";
+        var data = $('#registration_form').serialize();
+        $.ajax(url, {
+            data: data,
+            success: registration_success,
+            error: on_error,
+            type: "POST"
+        });
+        return false;
+    });
+});
+
+var registration_success = function (data) {
+    data = JSON.parse(data);
+
+    if (data.success) {
+        alert(data.message);
+        window.location.href = "homepage.php";
+    } else {
+        alert(data.message);
+    }
+};
+
+var on_error = function () {
+    alert("something went wrong");
+};
+
 document.getElementById("submit").onclick=function(){
     var pass1 = document.getElementById("fpassword").value;
     var pass2 = document.getElementById("cfpassword").value;
@@ -12,18 +41,19 @@ document.getElementById("submit").onclick=function(){
         return false;
     }
     else if(pass1 ==""){
-        alert ("password field must be filled");
-        return false;
+       alert ("password field must be filled");
+       return false;
     }
     else if(pass2 ==""){
         alert ("confirm password field must be field");
-        return false;
+       return false;
     }    
-    else if(pass1 !=pass2){
+   else if(pass1 !=pass2){
         alert ("enter correct password");
         return false;
     }
     else {
         return true;
+        header("location:homepage.php");
     }
 }

@@ -61,7 +61,7 @@ body{
    // border-style : solid;
     color : black;
     float : left;
-    background : lightsteelblue;
+    background-color: rgb(244,244,244);
 }
 .s{
     width :100%;
@@ -69,7 +69,7 @@ body{
     //border-style : solid;
     color : black;
     float : left;
-    background : darkslategrey;
+    background-color: #3A3A3A;
 }
 .l21{
     width : 100%;
@@ -80,7 +80,7 @@ body{
 }
 h1{
     font-size : 40;
-    color : darkslateblue;
+    color: #7c7c7c;
 }
 .text{
     width : 500px;
@@ -123,7 +123,7 @@ h1{
     padding-left :32%;
 }
 a{
-    color : green;
+    color : crimson;
     font-size : 21px;
 }
 

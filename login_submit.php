@@ -5,16 +5,22 @@
     $db_password = "rupa";
     $database = "social_media";
     
+    $response = array();
     $conn = mysqli_connect($hostname, $username, $db_password, $database);
     if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
+        $response['success'] = false;
+        $response['message'] = "Connection failed: " . mysqli_connect_error();
+        echo json_encode($response);
+        exit();
     }
     
     $sql = "SELECT * FROM users";
-    
     $result = mysqli_query($conn, $sql);
     if (!$result) {
-        die("Error: " . $sql . "<br>" . mysqli_error($conn));
+        $response['success'] = false;
+        $response['message'] = "Error: " . $sql . "<br>" . mysqli_error($conn);
+        echo json_encode($response);
+        exit();
     }
     
     $email=$_POST['email'];
@@ -23,22 +29,48 @@
     $flag = 0;
     while ($row=mysqli_fetch_array($result)) {
         if($row['email']===$email&&$row['password']===$password){
-           // echo "Hi" ." ". $row['name'] . " " ."Welcome in social_media Website";
-            $_SESSION['user_id'] = $row['id'];
-            ?>
-           // <a href ="homepage_submit.php"> click here to continue </a>
-            <?php
-            $flag++;
+            // echo "Hi" ." ". $row['name'] . " " ."Welcome in social_media Website";
+            $_SESSION['id'] = $row['id'];
+            $flag = 1;
             break;
         }
-        else if($row['email']===$email){
-            echo "wrong password" . " ". "Enter correct password to login";
-            $flag++;
+        elseif($row['email']===$email){
+            //$response['success'] = false;
+            //$response['message'] = "Password does't match";
+            $flag = 3;
+            break;
         }        
     }
-    if($flag===0){
-        echo "not Register go to Registration_Page first ";
+   // echo $password;
+    //if($email==""&&$password==""){
+       // $response['success']=false;
+        //$response['message']="field must be field";
+       // $flag=3;
+   // }
+    //if($email==""){
+       // $response['success']=false;
+       // $response['message']="email field must be field";
+        //$flag=3;
+    //}
+    //if($password==""){
+       // $response['success']=false;
+       // $response['message']="password field must be field";
+        //$flag=3;
+    //}
+    if($flag===3){
+        $response['success'] = false;
+        $response['message']= "password does't match";
     }
-        mysqli_close($conn);    	
+    elseif($flag===0){
+        $response['success'] = false;
+        $response['message'] = "Login failed";
+    } else {
+        $response['success'] = true;
+        $response['message'] = "login successfully";
+    }
+
+    echo json_encode($response);
+    
+    mysqli_close($conn);    	
 ?> 
     
