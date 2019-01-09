@@ -40,7 +40,7 @@
    // border-style : solid;
     width : 100%;
     float : left;
-    padding-left :275px;
+    padding-left :20%;
     margin-top :20px;
 }
 .l1{
@@ -120,7 +120,7 @@ h1{
     //border-style :solid;
     float : left ;
     margin-top :160px;
-    padding-left :450px;
+    padding-left :32%;
 }
 a{
     color : green;
