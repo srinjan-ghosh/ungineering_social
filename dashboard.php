@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if(!isset($_SESSION['user_id'])){
+    if(!isset($_SESSION['id'])){
         header("Location:login_form.php");
         exit;
     }
@@ -14,7 +14,7 @@
         die("Connection failed: " . mysqli_connect_error());
     }
 
-    $user_id=$_SESSION['user_id'];
+    $user_id=$_SESSION['id'];
 
     $sql = "SELECT * FROM users WHERE id='$user_id'";
 

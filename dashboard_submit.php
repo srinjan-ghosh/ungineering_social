@@ -5,7 +5,7 @@
     $db_password = "123456";
     $database = "social_media";
 
-    $user_id=$_SESSION['user_id'];
+    $user_id=$_SESSION['id'];
     
     $conn=mysqli_connect($hostname,$username,$db_password,$database);
     if (!$conn) {
