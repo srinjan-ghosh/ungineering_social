@@ -60,7 +60,7 @@
                     </div>
                 </div>  
             </div>
-       <?php //} ?>
+       <?php } ?>
         <div class="b">
             <div class="c">
               <?php
