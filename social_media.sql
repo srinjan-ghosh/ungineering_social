@@ -20,6 +20,7 @@ CREATE TABLE status_updates(
 );
 ALTER TABLE users ADD UNIQUE (email);
 ALTER TABLE status_updates ADD UNIQUE (email);
+ALTER TABLE status_updates DROP email;
         
         
         
