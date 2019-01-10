@@ -14,6 +14,7 @@
         die("Connection failed: " . mysqli_connect_error());
     }
 
+   
 
     $user_id=$_SESSION['user_id'];
 
