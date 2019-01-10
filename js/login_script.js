@@ -1,5 +1,15 @@
 $(document).ready(function () {
     $('#login_form').submit(function() {
+        var pass = document.getElementById("fpassword").value;
+        var email = document.getElementById("femail").value;
+        if(email == ""){
+            alert ("email text field must be filled");
+            return false;
+        }
+        else if(pass ==""){
+            alert ("password text field must be field");
+            return false;
+        }
         var url = "login_submit.php";
         var data = $('#login_form').serialize();
         $.ajax(url, {
