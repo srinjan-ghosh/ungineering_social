@@ -20,6 +20,8 @@ var update_success = function(data){
         $('#password').val(data.password);
         $('#college').val(data.college);
         $('#phn-no').val(data.phone_number);
+    }else{
+        $('#error').append(data.message);
     }
 }
 
