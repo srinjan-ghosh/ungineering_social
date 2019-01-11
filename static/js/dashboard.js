@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $("#update-form").submit(function(){
-        var url="dashboard_submit.php";
+        var url="/social_media/index.php/home/dashboard_submit";
         var data=$('#update-form').serialize();
         $.ajax(url, {
             data:data,

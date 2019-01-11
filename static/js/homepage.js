@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $('.submit_form').submit(function() {
-        var url = "homepage_submit.php";
+        var url = "/social_media/index.php/home/status_submit";
         var data = $('.submit_form').serialize();
         $.ajax(url, {
             data: data,
@@ -16,7 +16,7 @@ var dataentry_success = function (data) {
 
     if (data.success) {
         alert(data.message);
-        window.location.href = "homepage.php";
+        window.location.href = "/social_media/index.php/home/";
     } else {
         alert(data.message);
     }

@@ -28,7 +28,7 @@ $(document).ready(function () {
           // return true;
          //  header("location:homepage.php");
       // }
-        var url = "registration_submit.php";
+        var url = "/social_media/index.php/login/registration_submit";
         var data = $('#registration_form').serialize();
         $.ajax(url, {
             data: data,
@@ -45,7 +45,7 @@ var registration_success = function (data) {
 
     if (data.success) {
         alert(data.message);
-        window.location.href = "homepage.php";
+        window.location.href = "/social_media/index.php/home/";
     } else {
         alert(data.message);
     }
