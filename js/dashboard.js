@@ -15,6 +15,7 @@ $(document).ready(function(){
 var update_success = function(data){
     data = JSON.parse(data);
     if(data.success){
+        alert("Data Updated Successfully!");
         $('#name-field').val(data.name);
         $('#email').val(data.email);
         $('#password').val(data.password);
