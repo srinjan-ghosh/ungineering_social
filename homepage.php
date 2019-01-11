@@ -14,7 +14,7 @@
 <html>
     <head>
         <title></title>
-        <link rel="stylesheet" href="/social_media/css/homepage.css">
+        <link rel="stylesheet" href="css/homepage.css">
     </head>
     <body>   
         <div class="a">  
@@ -22,7 +22,7 @@
                 <img class="image" src="img/Social-Media-Graphic.jpg"/>
             </div>
             <div class="a2">
-            <?php if(isset($_SESSION['user_id'])){ ?>
+            <?php if(isset($_SESSION['id'])){ ?>
                     <a href="homepage.php"><button class="button1">Logout</button></a>
             <?php }
                   else{?>
@@ -30,7 +30,7 @@
             <?php } ?>   
             </div>
             <div class="a3">
-               <?php if(isset($_SESSION['user_id'])){?>
+               <?php if(isset($_SESSION['id'])){?>
                    <a href="dashboard.php"><button class="button2">My Dashboard</button></a>
                 <?php }
                     else {?>
