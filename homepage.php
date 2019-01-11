@@ -23,7 +23,7 @@
             </div>
             <div class="a2">
             <?php if(isset($_SESSION['id'])){ ?>
-                    <a href="homepage.php"><button class="button1">Logout</button></a>
+                    <a href="logout.php"><button class="button1">Logout</button></a>
             <?php }
                   else{?>
                   <a href="registration_form.php"><button class="button1">New user</button></a>
