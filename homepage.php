@@ -1,5 +1,5 @@
 <?php
-    //session_start();
+    session_start();
     $hostname = "localhost";
     $username = "root";
     $db_password = "sayantan";
@@ -22,23 +22,23 @@
                 <img class="image" src="img/Social-Media-Graphic.jpg"/>
             </div>
             <div class="a2">
-            <?php //if(isset($_SESSION['user_id'])){ ?>
+            <?php if(isset($_SESSION['user_id'])){ ?>
                     <a href="homepage.php"><button class="button1">Logout</button></a>
-            <?php// }
-                  //else{?>
+            <?php }
+                  else{?>
                   <a href="registration_form.php"><button class="button1">New user</button></a>
-            <?php //} ?>   
+            <?php } ?>   
             </div>
             <div class="a3">
-               <?php //if(isset($_SESSION['user_id'])){?>
+               <?php if(isset($_SESSION['user_id'])){?>
                    <a href="dashboard.php"><button class="button2">My Dashboard</button></a>
-                <?php //}
-                    // else {?>
+                <?php }
+                    else {?>
                       <a href="login_form.php"><button class="button2">Login</button></a>
-               <?php //}?>
+               <?php }?>
             </div>
         </div>
-        <?php //if(isset($_SESSION['user_id'])){?>
+        <?php if(isset($_SESSION['id'])){?>
              <div class= "d">
                 <div class="d1">
                     <div class="d11">
@@ -48,15 +48,15 @@
                         <div class="d12a">
                         </div>
                         <div class="d12b">
-                            <form class="submit_form" method="post" action="homepage_submit.php">
-                            <input class ="d12d" type="text" name="status" >
+                           <form  class="submit_form" method="post" action="homepage_submit.php">
+                           <input class ="d12d" type="text" name="status" >
                         </div>
                         <div class="d12c">
                         </div>
                     </div>
                     <div class="d13">
-                          <input class="button3" type="submit" value="Submit"/>
-                          </form>
+                           <input class="button3" type="submit" value="Submit"/>
+                          </form>    
                     </div>
                 </div>  
             </div>

@@ -1,5 +1,5 @@
 <?php
-    //session_start();
+    session_start();
     $hostname = "localhost";
     $username = "root";
     $db_password = "sayantan";
@@ -13,11 +13,9 @@
         echo json_encode($response);
         exit();
     }
-    //$user_id=$_SESSION['user_id'];
-    $email = $_POST['email'];
-    $id = 1;
+    $user_id=$_SESSION['id'];
     $status = $_POST['status'];
-    $sql = "INSERT INTO status_updates (user_id, email, status) VALUES ($id, '$email', '$status')";
+    $sql = "INSERT INTO status_updates (user_id, status) VALUES ( $user_id, '$status')";
 
     if (!mysqli_query($conn, $sql)) {
         $response['success'] = false;
