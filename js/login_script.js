@@ -27,7 +27,7 @@ var login_success = function (data) {
 
     if (data.success) {
         alert(data.message);
-        window.location.href = "homepage.php";
+        window.location.href = "dashboard.php";
     } else {
         alert(data.message);
     }
