@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if(!isset($_SESSION['user_id'])){
+    if(!isset($_SESSION['id'])){
         header("Location:login_form.php");
         exit;
     }
@@ -14,26 +14,7 @@
         die("Connection failed: " . mysqli_connect_error());
     }
 
-   
-
-    $user_id=$_SESSION['user_id'];
-
-    // if($_POST['college']){
-    //     $name=$_POST['name'];
-    //     $email=$_POST['email'];
-    //     $password=$_POST['password'];
-    //     $college=$_POST['college'];
-    //     $phone=$_POST['phone-number'];
-    //     $sql="UPDATE users 
-    //             SET name='$name', email='$email', password='$password', collage='$college', phone_number='$phone' 
-    //             WHERE id='$user_id'";
-    //     if(!mysqli_query($conn, $sql)){
-    //         die("Error: ". $sql . "<br/>". mysqli_error($conn));
-    //     }
-    //     header("Location:dashboard.php");
-    //     exit;
-    // }
-
+    $user_id=$_SESSION['id'];
 
     $sql = "SELECT * FROM users WHERE id='$user_id'";
 
@@ -41,7 +22,6 @@
 
     $row= mysqli_fetch_array($result);
     
-
 ?>
 <html>
     <head>
@@ -49,12 +29,12 @@
         <link rel="stylesheet" href="css/dashboard.css"/>
     </head>
     <body>
-    <div class="banner">
+    <div class="header">
             <div id="logo">
                 <!-- img here -->
                 <img src="img/Social-Media-Graphic.jpg" alt="">
             </div>
-            <div id="banner-links">
+            <div id="header-links">
                 <!-- my dashboard
                 logout button -->
                 <p id= "dashboard"><strong>My Dashboard</strong></p>
@@ -63,7 +43,7 @@
         </div>
         <div class="body">
             <div class="account-details">
-                <h1 id="account-heading">My Account Details</h1>
+                <p id="form-tag"></p><h1 id="account-heading">My Account Details</h1>
                 <form id= "update-form" class="form" method="post" action="dashboard.php">
                     <div id="form-field">
                         <p id="form-tag">Name</p><input type="text" id="name-field" name="name" value="<?php echo $row['name']?>"/>

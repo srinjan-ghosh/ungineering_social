@@ -15,7 +15,6 @@
     }
     
     $sql = "SELECT * FROM users";
-    
     $result = mysqli_query($conn, $sql);
     if (!$result) {
         $response['success'] = false;
