@@ -4,7 +4,7 @@
     ?>
         <html>
             <h1> You are already logedin </h1>
-            <a href="dashboard.php">Click Here to go to homepage</a>  
+            <a href="dashboard.php">Click Here to go to dashboard</a>  
         </html>
     <?php 
     }
@@ -13,7 +13,7 @@
             <head>
                 <link rel="stylesheet" href="css/login.css"/>
             </head>
-            <body bgcolor="black">
+            <body>
                 <div class ="main">
                     <div class ="l1">
                         <div class ="l11">

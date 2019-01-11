@@ -1,7 +1,7 @@
 <?php
     $hostname = "localhost";
     $username = "root";
-    $db_password = "";
+    $db_password = "rupa";
     $database = "social_media";
     
     $response = array();

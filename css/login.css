@@ -36,7 +36,7 @@
 }
 body{
     width :99%;
-    height : 99%;
+    height : 98%;
 }
     
 .main{
@@ -121,7 +121,7 @@ h1{
    // border-style :solid;
     float : left ;
     margin-top : 25px;
-   padding-left : 32%;
+   padding-left : 29%;
 }
 a{
     color : crimson;

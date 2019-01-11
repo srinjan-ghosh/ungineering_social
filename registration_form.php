@@ -2,7 +2,7 @@
     <head>
         <link rel="stylesheet" href="css/registration_design.css"/>
     </head>
-    <body bgcolor="black">
+    <body >
         <div class ="main">
             <div class ="l1">
                 <div class ="l11">
