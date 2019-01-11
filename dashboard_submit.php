@@ -2,7 +2,7 @@
     session_start();
     $hostname = "localhost";
     $username = "root";
-    $db_password = "123456";
+    $db_password = "sayantan";
     $database = "social_media";
 
     $user_id=$_SESSION['user_id'];

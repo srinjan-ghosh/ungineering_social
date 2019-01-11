@@ -113,8 +113,8 @@
 .b{
 
     //border: solid 3px black;
-    height:1800px;
-    background-color: rgb(244,244,244);
+    //height:1800px;
+    //background-color: rgb(244,244,244);
 }
 .c{
     //border: solid 3px red;
@@ -126,6 +126,8 @@
     width:60%;
     margin-top:100px;
     margin-bottom:50px;
+    //background-color: rgb(244,244,244);
+    
 }
 .c1{
     float:left;

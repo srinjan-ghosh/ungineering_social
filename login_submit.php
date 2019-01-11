@@ -2,7 +2,7 @@
     session_start();
     $hostname = "localhost";
     $username = "root";
-    $db_password = "rupa";
+    $db_password = "sayantan";
     $database = "social_media";
     
     $response = array();
