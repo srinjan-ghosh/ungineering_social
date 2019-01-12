@@ -1,13 +1,14 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
+
 <?php 
     session_start();
     if(isset($_SESSION['id'])){
     ?>
         <html>
             <h1> You are already logged in </h1>
-            <a href="dashboard.php">Click Here to go to dashboard</a>  
+            <a href="homepage.php">Click Here to go to Homepage</a>  
         </html>
     <?php 
     }
