@@ -9,40 +9,52 @@ class Login extends CI_Controller{
     
     public function login_submit(){
         session_start();
-        $hostname = "localhost";
+       /* $hostname = "localhost";
         $username = "root";
-        $db_password = "123456";
-        $database = "social_media";
+        $db_password = "rupa";
+        $database = "social_media";*/
 
         $response = array();
-        $conn = mysqli_connect($hostname, $username, $db_password, $database);
+       /*$conn = mysqli_connect($hostname, $username, $db_password, $database);
         if (!$conn) {
             $response['success'] = false;
             $response['message'] = "Connection failed: " . mysqli_connect_error();
             echo json_encode($response);
             exit();
-        }
+        }*/
 
-        $sql = "SELECT * FROM users";
+       // $sql = "SELECT * FROM users";
 
-        $result = mysqli_query($conn, $sql);
+       /* $result = mysqli_query($conn, $sql);
         if (!$result) {
             $response['success'] = false;
             $response['message'] = "Error: " . $sql . "<br>" . mysqli_error($conn);
             echo json_encode($response);
             exit();
-        }
+        }*/
 
         $email = $_POST['email'];
         $password = $_POST['password'];
 
         $flag = 0;
-        while ($row = mysqli_fetch_array($result)) {
+       /* while ($row = mysqli_fetch_array($result)) {
             if ($row['email'] === $email && $row['password'] === $password) {
                 $_SESSION['id'] = $row['id'];
                 $flag = 1;
                 break;
             } elseif ($row['email'] === $email) {
+                $flag = 3;
+                break;
+            }
+        }*/
+        $this->load->model('user');
+        $r=$this->user->get_name();
+        foreach($r as $row){
+            if($row->email ==$email && $row->password == $password){
+                $_SESSION['id'] = $row->id;
+                $flag = 1;
+                break;
+            } elseif ($row->email == $email){
                 $flag = 3;
                 break;
             }
@@ -60,7 +72,7 @@ class Login extends CI_Controller{
 
         echo json_encode($response);
     
-        mysqli_close($conn);    
+        //mysqli_close($conn);    
     }
     
     public function registration(){
@@ -68,36 +80,36 @@ class Login extends CI_Controller{
     }
     
     public function registration_submit(){
-        $hostname = "localhost";
+        /*$hostname = "localhost";
         $username = "root";
-        $db_password = "123456";
-        $database = "social_media";
+        $db_password = "rupa";
+        $database = "social_media"*/;
 
         $response = array();
-        $conn = mysqli_connect($hostname, $username, $db_password, $database);
+       /* $conn = mysqli_connect($hostname, $username, $db_password, $database);
         if (!$conn) {
             $response['success'] = false;
             $response['message'] = "Connection failed: " . mysqli_connect_error();
             echo json_encode($response);
             exit();
-        }
+        }*/
 
         $name = $_POST['name'];
         $email = $_POST['email'];
         $password = $_POST['password'];
 
-        $sql = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password')";
+        /*$sql = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password')";
         if (!mysqli_query($conn, $sql)) {
             $response['success'] = false;
             $response['message'] = "this email exist ";
             echo json_encode($response);
             exit();
-        }
+        }*/
 
         $response['success'] = true;
         $response['message'] = "Registration successful";
         echo json_encode($response);
-        mysqli_close($conn);
+       // mysqli_close($conn);
     }
 
 

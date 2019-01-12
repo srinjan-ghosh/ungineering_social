@@ -9,4 +9,13 @@ class User extends CI_Model {
         $this->load->database(); /* connect to database stablish database connection */
     }
 
+    public function get_data() {
+        $query = $this->db->query("SELECT * FROM users;");
+        /*foreach ($query->result() as $row) {
+            
+        }*/
+        return $query->result();
+    }
+    
+
 }
