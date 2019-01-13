@@ -35,6 +35,7 @@ class Login extends CI_Controller{
 
         $email = $_POST['email'];
         $password = $_POST['password'];
+        //echo $email;
 
         $flag = 0;
        /* while ($row = mysqli_fetch_array($result)) {
@@ -48,7 +49,7 @@ class Login extends CI_Controller{
             }
         }*/
         $this->load->model('user');
-        $r=$this->user->get_name();
+        $r=$this->user->get_data();
         foreach($r as $row){
             if($row->email ==$email && $row->password == $password){
                 $_SESSION['id'] = $row->id;
