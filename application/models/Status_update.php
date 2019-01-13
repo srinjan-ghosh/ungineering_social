@@ -11,5 +11,10 @@ class Status_update extends CI_Model {
     public function insert_data($data){
          $this->db->insert('status_updates', $data);   
     }
+    public function get_statuses($user_id) {
+        $this->db->where('user_id', $user_id);
+        $query = $this->db->get('status_updates');
+        return $query->result_array();
+    }
 
 }

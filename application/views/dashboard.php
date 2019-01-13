@@ -1,28 +1,3 @@
-<?php
-    session_start();
-    if(!isset($_SESSION['id'])){
-        header("Location:/social_media/index.php/home/");
-        exit;
-    }
-    $hostname = "localhost";
-    $username = "root";
-    $db_password = "123456";
-    $database = "social_media";
-    
-    $conn=mysqli_connect($hostname,$username,$db_password,$database);
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-
-    $user_id=$_SESSION['id'];
-
-    $sql = "SELECT * FROM users WHERE id='$user_id'";
-
-    $result =  mysqli_query($conn,$sql);
-
-    $row= mysqli_fetch_array($result);
-    
-?>
 <html>
     <head>
         <title>Dashboard</title>
@@ -46,19 +21,19 @@
                 <p id="form-tag"></p><h1 id="account-heading">My Account Details</h1>
                 <form id= "update-form" class="form" method="post" action="/social_media/index.php/home/dashboard_submit">
                     <div id="form-field">
-                        <p id="form-tag">Name</p><input type="text" id="name-field" name="name" value="<?php echo $row['name']?>"/>
+                        <p id="form-tag">Name</p><input type="text" id="name-field" name="name" value="<?php echo $user_data['name']?>"/>
                     </div>
                     <div id="form-field"> 
-                        <p id="form-tag">Email</p><input type="email" name="email" value="<?php echo $row['email']?>"/>
+                        <p id="form-tag">Email</p><input type="email" name="email" value="<?php echo $user_data['email']?>"/>
                     </div>
                     <div id="form-field"> 
-                        <p id="form-tag">Password</p><input type="password" name="password" value="<?php echo $row['password']?>"/>
+                        <p id="form-tag">Password</p><input type="password" name="password" value="<?php echo $user_data['password']?>"/>
                     </div>
                     <div id="form-field"> 
-                        <p id="form-tag">College</p><input type="text" id="college" name="college" value="<?php echo $row['collage']?>"/>
+                        <p id="form-tag">College</p><input type="text" id="college" name="college" value="<?php echo $user_data['collage']?>"/>
                     </div>
                     <div id="form-field">
-                        <p id="form-tag">Phone Number</p><input type="text" id="phn-no" name="phone-number" value="<?php echo $row['phone_number']?>"/>
+                        <p id="form-tag">Phone Number</p><input type="text" id="phn-no" name="phone-number" value="<?php echo $user_data['phone_number']?>"/>
                     </div>
                     <div>
                         <p id="form-tag"></p><input type="submit" name="submit" value="Update">
@@ -69,11 +44,9 @@
             <div class="post">
                 <h1 id="post-heading">My Post</h1>
                 <?php
-                    $sql = "SELECT date_time,status FROM status_updates WHERE user_id = '$user_id'";
-                    $result = mysqli_query($conn,$sql);
-                    while($row = mysqli_fetch_array($result)){
+                    foreach($statuses as $status){
                         ?>
-                        <p id="post-desc"><?php echo $row['date_time']?><br><br><?php echo $row['status']?></p>
+                        <p id="post-desc"><?php echo $status['date_time']?><br><br><?php echo $status['status']?></p>
                         <?php
                     }
                 ?>

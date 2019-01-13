@@ -1,19 +1,28 @@
 <?php
-    defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends CI_Controller{
-    
-    public function index(){
+
+class Home extends CI_Controller {
+
+    public function index() {
         $this->load->view('homepage');
     }
-    
-    public function dashboard(){
-        $this->load->view('dashboard');
-    }
-    
-    public function status_submit(){
+
+    public function dashboard() {
         session_start();
-        /*$hostname = "localhost";
+        if (!isset($_SESSION['id'])) {
+            header("Location:/social_media/index.php/home/");
+            exit;
+        }
+        $this->load->model('user');
+        $this->load->model('status_update');
+        $data['user_data'] = $this->user->get_data_of_users($_SESSION['id']);
+        $data['statuses'] = $this->status_update->get_statuses($data['user_data']['id']);
+        $this->load->view('dashboard', $data);
+    }
+
+    public function status_submit() {
+        $hostname = "localhost";
         $username = "root";
         $db_password = "123456";
         $database = "social_media";*/
@@ -49,18 +58,12 @@ class Home extends CI_Controller{
         echo json_encode($response);
         //mysqli_close($conn);
     }
-    
-    public function dashboard_submit(){
+
+    public function dashboard_submit() {
         session_start();
-        $hostname = "localhost";
-        $username = "root";
-        $db_password = "123456";
-        $database = "social_media";
-
         $user_id = $_SESSION['id'];
-
-        $conn = mysqli_connect($hostname, $username, $db_password, $database);
-        if (!$conn) {
+        
+        if (!$this->load->model('user')) {
             $response['success'] = false;
             $response['message'] = "Connection failed: " . mysqli_connect_error();
             echo json_encode($response);
@@ -68,30 +71,27 @@ class Home extends CI_Controller{
         }
 
         if ($_POST['college'] || $_POST['phone-number']) {
-            $name = $_POST['name'];
-            $email = $_POST['email'];
-            $password = $_POST['password'];
-            $college = $_POST['college'];
-            $phone = $_POST['phone-number'];
-            $sql = "UPDATE users 
-                SET name='$name', email='$email', password='$password', collage='$college', phone_number='$phone' 
-                WHERE id='$user_id'";
-            if (!mysqli_query($conn, $sql)) {
+            $data['name'] = $_POST['name'];
+            $data['email'] = $_POST['email'];
+            $data['password'] = $_POST['password'];
+            $data['collage'] = $_POST['college'];
+            $data['phone_number'] = $_POST['phone-number'];
+            $result= $this->user->update_data_of_user($user_id,$data);
+            if ($result!=1) {
                 $response['success'] = false;
-                $response['message'] = "Error " . $sql . "<br>" . mysqli_error($conn);
+                $response['message'] = "Error in Updating Data";
                 echo json_encode($response);
                 exit();
-            }
-            $response['success'] = true;
-            $response['name'] = $_POST['name'];
-            $response['email'] = $_POST['email'];
-            $response['password'] = $_POST['password'];
-            $response['college'] = $_POST['college'];
-            $response['phone_number'] = $_POST['phone-number'];
+            }else{
+                $response['success'] = true;
+                $response['name'] = $_POST['name'];
+                $response['email'] = $_POST['email'];
+                $response['password'] = $_POST['password'];
+                $response['college'] = $_POST['college'];
+                $response['phone_number'] = $_POST['phone-number'];
 
-            echo json_encode($response);
-            mysqli_close($conn);
+                echo json_encode($response);
+            }
         }
     }
 }
-
