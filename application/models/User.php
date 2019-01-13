@@ -21,7 +21,7 @@ class User extends CI_Model {
         $query = $this->db->get('users');
         return $query->row_array();
     }
-        public function insert_data($data) {
+    public function insert_data($data) {
         $this->db->insert('users', $data);   
     }
     public function update_data_of_user($id,$data){
