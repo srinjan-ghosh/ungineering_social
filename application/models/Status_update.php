@@ -8,5 +8,8 @@ class Status_update extends CI_Model {
         parent::__construct();
         $this->load->database(); /* connect to database stablish database connection */
     }
+    public function insert_data($data){
+         $this->db->insert('status_updates', $data);   
+    }
 
 }
