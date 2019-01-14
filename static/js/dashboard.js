@@ -22,10 +22,10 @@ var update_success = function(data){
         $('#college').val(data.college);
         $('#phn-no').val(data.phone_number);
     }else{
-        $('#error').append(data.message);
+        alert(data.message);
     }
-}
+};
 
 var onError = function(){
     alert("Something went Wrong");
-}
+};

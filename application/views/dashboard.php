@@ -1,13 +1,13 @@
 <html>
     <head>
         <title>Dashboard</title>
-        <link rel="stylesheet" href="../../static/css/dashboard.css"/>
+        <link rel="stylesheet" href="/social_media/static/css/dashboard.css"/>
     </head>
     <body>
     <div class="header">
             <div id="logo">
                 <!-- img here -->
-                <a href="/social_media/index.php/home/"><img src="../../static/img/Social-Media-Graphic.jpg" alt=""></a>
+                <a href="/social_media/index.php/home/"><img src="/social_media/static/img/Social-Media-Graphic.jpg" alt=""></a>
             </div>
             <div id="header-links">
                 <!-- my dashboard
@@ -55,6 +55,6 @@
         <div class="footer">
         </div>
     </body>
-    <script src="../../static/js/jquery-3.3.1.min.js"></script>
-    <script src="../../static/js/dashboard.js"></script>
+    <script src="/social_media/static/js/jquery-3.3.1.min.js"></script>
+    <script src="/social_media/static/js/dashboard.js"></script>
 </html>

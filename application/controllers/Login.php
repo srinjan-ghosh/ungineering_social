@@ -122,7 +122,10 @@ class Login extends CI_Controller{
     }
 
     public function logout() {
-        $this->load->view('logout');
+        session_start();
+        unset($_SESSION['id']);
+        header("Location:/social_media/index.php/Home");
+        exit;
     }
 
 }

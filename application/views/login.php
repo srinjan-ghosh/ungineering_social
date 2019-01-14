@@ -15,13 +15,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     else{ ?>
         <html>
             <head>
-                <link rel="stylesheet" href="../../static/css/login.css"/>
+                <link rel="stylesheet" href="/social_media/static/css/login.css"/>
             </head>
             <body>
                 <div class ="main">
                     <div class ="l1">
                         <div class ="l11">
-                            <img src="../../static/img/Social-Media-Graphic.jpg" alt=" logo" width = "250" height ="150">
+                            <img src="/social_media/static/img/Social-Media-Graphic.jpg" alt=" logo" width = "250" height ="150">
                         </div>
                         <div class ="l12">
                             <h1>Existing User Log-In</h1>
@@ -64,8 +64,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class ="s">
                     </div>
                 </div>
-                <script type="text/javascript" src="../../static/js/jquery-3.3.1.min.js"></script>
-                <script type="text/javascript" src="../../static/js/login_script.js"></script> 
+                <script type="text/javascript" src="/social_media/static/js/jquery-3.3.1.min.js"></script>
+                <script type="text/javascript" src="/social_media/static/js/login_script.js"></script> 
             </body>
         </html>
     <?php

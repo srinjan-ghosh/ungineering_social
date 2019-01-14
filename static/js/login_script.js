@@ -10,7 +10,7 @@ $(document).ready(function () {
             alert ("password text field must be field");
             return false;
         }
-        var url = "../../index.php/login/login_submit";
+        var url = "/social_media/index.php/login/login_submit";
         var data = $('#login_form').serialize();
         $.ajax(url, {
             data: data,

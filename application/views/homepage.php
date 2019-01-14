@@ -14,12 +14,12 @@
 <html>
     <head>
         <title></title>
-        <link rel="stylesheet" href="../../static/css/homepage.css">
+        <link rel="stylesheet" href="/social_media/static/css/homepage.css">
     </head>
     <body>   
         <div class="a">  
             <div class="a1">
-                <img class="image" src="../../static/img/Social-Media-Graphic.jpg"/>
+                <img class="image" src="/social_media/static/img/Social-Media-Graphic.jpg"/>
             </div>
             <div class="a2">
             <?php if(isset($_SESSION['id'])){ ?>
@@ -77,8 +77,8 @@
                <?php } ?>     
            </div>
        </div>
-        <script type="text/javascript" src="../../static/js/jquery-3.3.1.min.js"></script>
-        <script type="text/javascript" src="../../static/js/homepage.js"></script>
+        <script type="text/javascript" src="/social_media/static/js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="/social_media/static/js/homepage.js"></script>
    </body>
 </html>
 

@@ -16,17 +16,29 @@ class User extends CI_Model {
         }*/
         return $query->result();
     }
+    
     public function get_data_of_users($id) {
         $this->db->where('id', $id);
         $query = $this->db->get('users');
         return $query->row_array();
     }
+    
     public function insert_data($data) {
         $this->db->insert('users', $data);   
     }
+    
     public function update_data_of_user($id,$data){
-        $this->db->where('id',$id);
-        $query_result = $this->db->update('users',$data);
-        return $query_result;
+        $this->db->where('email',$data['email']);
+        $query = $this->db->get('users');
+        $info = $query->row_array();
+        if(!$info){
+            $this->db->where('id',$id);
+            $query_result = $this->db->update('users',$data);
+            return $query_result;
+        }else{
+            if($info['email'] === $data['email'] && $id!==$info['id']){
+                return 0;
+            }
+        }
     }
 }
